@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,NO_ERRORS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,12 +12,15 @@ import {MatButtonModule} from "@angular/material/button";
 import { HeaderComponent } from './component/header/header.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
+import { VideoCreatedComponent } from './video-created/video-created.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
     AppComponent,
     UploadVideoComponent,
-    HeaderComponent
+    HeaderComponent,
+    VideoCreatedComponent
   ],
   imports: [
     BrowserModule,
@@ -28,9 +31,14 @@ import {MatIconModule} from "@angular/material/icon";
     NgxFileDropModule,
     MatButtonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    NO_ERRORS_SCHEMA
+
+  ]
 })
 export class AppModule { }
