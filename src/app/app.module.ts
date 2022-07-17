@@ -7,13 +7,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UploadVideoComponent } from './upload-video/upload-video.component';
 import {NgxFileDropModule} from "ngx-file-drop";
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import { HeaderComponent } from './component/header/header.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import { VideoCreatedComponent } from './video-created/video-created.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import {MatOptionModule} from "@angular/material/core";
+import {MatInputModule} from "@angular/material/input";
+import {MatChipsModule} from "@angular/material/chips";
+import {VgCoreModule} from "@videogular/ngx-videogular/core";
+import {VgOverlayPlayModule} from "@videogular/ngx-videogular/overlay-play";
+import {VgBufferingModule} from "@videogular/ngx-videogular/buffering";
+import {VgControlsModule} from "@videogular/ngx-videogular/controls";
 
 @NgModule({
   declarations: [
@@ -32,7 +41,17 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatChipsModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
